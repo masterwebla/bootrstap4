@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Celdas con Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<style>
+		#imagen{
+			display: none;
+		}
+		footer{
+			position: fixed;
+			bottom: 0px;
+			margin: 0px;
+			padding: 20px;
+			background-color: black;
+			color: white;
+		}
+		.carrusel-caption{
+			padding-bottom: 400px;
+		}
+		.bg-dark{
+			background-color: red;
+		}
+		
+		/* EVALUAR SI LA PANTALLA TIENE MENOS DE 700px */
+		@media(max-width: 700px){
+			#demo{
+				display: none;
+			}
+			#imagen{
+				display: initial;
+			}
+			.desaparecer{
+				display: none;
+			}
+			p{
+				color: red;
+			}
+		}
+		/* EVALUAR SI EL ANCHO DE LA PANTALLA ESTÁ ENTRE 700 Y 900 px*/
+		@media(min-width: 700px and max-width: 900px){
+			p{
+				color: blue;
+			}
+		}
+		/* EVALUAR SI ESTÁ HORIZONTAL LA PANTALLA */
+		@media(orientation:portrait){
+			p{
+				color: green;
+			}
+		}
+		/* EVALUAR SI ESTÁ VERTICAL LA PANTALLA */
+		@media(orientation:landscape){
+			p{
+				color: green;
+			}
+		}
+
+		/* EVALUAR SI SE USA EN UN DISPOSITIVO DE MANO */
+		@media handheld and (min-width: 300px){
+			p{
+				color: yellow;
+			}
+		}
+	</style>
+	<script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- MENU -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">MasterWeb.La</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#"><i class="fas fa-home"></i> <span class="desaparecer">Inicio</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#"><i class="fab fa-angellist"></i> <span class="desaparecer">Nosotros</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#"><i class="fas fa-eye"></i> <span class="desaparecer">Servicios</span></a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+	<!-- FIN MENU -->
+	<!-- CARRUSEL -->
+	<div id="demo" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ul class="carousel-indicators">
+	    <li data-target="#demo" data-slide-to="0" class="active"></li>
+	    <li data-target="#demo" data-slide-to="1"></li>
+	    <li data-target="#demo" data-slide-to="2"></li>
+	  </ul>
+
+	  <!-- The slideshow -->
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img src="imagenes/slide1.jpg" alt="Moto uno">
+	      <div class="carousel-caption text-right">
+		    <h3>Mi moto dominguera</h3>
+		    <p>Con esta paseo</p>
+		    <a href="celdas.html" class="btn btn-info">Verla</a>
+		  </div>
+	    </div>
+	    <div class="carousel-item">
+	      <a href="celdas.html">
+	      	<img src="imagenes/slide2.jpg" alt="Moto dos">
+	      </a>	      	
+	    </div>
+	    <div class="carousel-item">
+	      <img src="imagenes/slide1.jpg" alt="Moto tres">
+	    </div>
+	  </div>
+
+	  <!-- Left and right controls -->
+	  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+	    <span class="carousel-control-prev-icon"></span>
+	  </a>
+	  <a class="carousel-control-next" href="#demo" data-slide="next">
+	    <span class="carousel-control-next-icon"></span>
+	  </a>
+	</div>
+	<!-- FIN - CARRUSEL -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+				<button class="btn btn-info">Editar <i class="fas fa-edit"></i></button>
+				<button class="btn btn-success">Guardar <i class="fas fa-save"></i></button>
+
+				<p><i class="fas fa-clock"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed natus sequi a officia animi neque vero inventore repudiandae adipisci. Rerum voluptates voluptatum cum architecto, delectus maiores libero, nihil nam nemo?</p>
+				<img id="imagen" src="imagenes/parque.jpg" alt="Parque" class="img-thumbnail">
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit quas hic, aliquid unde consectetur nam saepe laborum natus, dolore voluptate quibusdam quisquam culpa incidunt deleniti sit illum cumque eveniet nulla!</p>
+					</div>
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, illum tempore fugit dicta unde amet, nobis! Doloribus repellat fuga modi expedita tenetur! Et eius, qui ab ut necessitatibus aperiam exercitationem.</p>
+					</div>
+					<div class="col-md-4">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis consequuntur earum quae minus commodi eum tenetur asperiores maiores rem, facilis officiis similique inventore quis quod sequi animi illo natus, voluptas.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur obcaecati nihil, commodi magni harum, debitis neque mollitia expedita vel ipsum quas eos quidem quod maiores quam fugiat perferendis velit saepe!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="row">
+			<div class="col-md-12">
+				<p>Todos los derechos reservados Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis totam aperiam doloribus officiis quibusdam, perspiciatis, sunt vero sequi, excepturi saepe rerum animi similique dolores. Repudiandae, corporis, excepturi? Eum, eaque mollitia!</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Celdas con Bootstrap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		.fondoimg{
+			background-image: url('imagenes/parque.jpg');
+		}
+	</style>
+	<script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!-- la clase row determina donde empieza una nueva fila -->
+		<div class="row">
+			<!-- la clase col-md-# determina cúantas celdas se van a utilizar -->
+			<div class="col-md-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe assumenda, dolore fugit soluta error repellendus maxime molestiae maiores vitae minus molestias pariatur voluptates magni odio dicta impedit? Harum, pariatur, libero.</p>
+			</div>
+			<div class="col-md-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem facere voluptatibus veniam magni corrupti odio nesciunt culpa quis, aliquam et, nemo dicta eius, perferendis incidunt at soluta ex maxime recusandae?</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea est in nesciunt consectetur deleniti officia quasi, aperiam sit maiores vitae ut qui. Maxime non molestiae adipisci cupiditate debitis excepturi recusandae.</p>
+			</div>
+			<div class="col-sm-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo perferendis, consectetur sapiente reprehenderit, atque culpa quo dicta dolore omnis eligendi laudantium nobis. Ipsam odio saepe in, magni quasi a aspernatur!</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4">
+				<form action="">
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" class="form-control">
+					</div>
+					<button class="btn btn-success btn-block">Acceder</button>
+				</form>
+			</div>
+			<div class="col-md-4 fondoimg text-justify">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea necessitatibus consequuntur fugiat, hic tenetur quis tempora ipsa vero aliquam itaque. Iure omnis tempora aliquam neque laboriosam dignissimos. Quisquam repellendus, molestiae.</p>
+
+			</div>
+			<div class="col-md-4">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur provident sint, at fuga praesentium repellat laborum eum sequi explicabo possimus. Laborum, dolorem nam eaque obcaecati delectus suscipit mollitia eos! Excepturi.</p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
